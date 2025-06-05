@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation</title>
+  <style>
+    body {
+      background-color: white;
+      color: pink;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 22px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      margin-left: 10px;
+      padding: 10px 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background-color: black;
+      color: pink;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form onsubmit="checkInput(event)">
+      <input type="text" id="userInput" placeholder="Écris ici le mot de passe..." required>
+      <button type="submit">Valider</button>
+    </form>
+  </div>
+
+  <script>
+    function checkInput(event) {
+      event.preventDefault(); // Empêche le rechargement automatique du formulaire
+
+      const correctAnswer = "motdepasse"; // Remplace par la bonne réponse
+      const userInput = document.getElementById("userInput").value.trim();
+
+      if (userInput === correctAnswer) {
+        window.location.href = "L83.html"; // Lien si la réponse est bonne
+      } else {
+        location.reload(); // Recharge la page si la réponse est mauvaise
+      }
+    }
+  </script>
+</body>
+</html>

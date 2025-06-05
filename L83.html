@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Je t'aime Lana ❤️</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .heart {
+      font-size: 100px;
+      animation: spin 5s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .text {
+      margin-top: 20px;
+      font-size: 32px;
+      color: white;
+    }
+
+    .floating {
+      position: absolute;
+      top: 10px;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .floating span {
+      display: inline-block;
+      animation: moveText 5s linear infinite;
+      color: #ff4d4d;
+      font-size: 20px;
+      margin-right: 130px;
+    }
+
+    @keyframes moveText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating">
+    <span>1 an</span>
+    <span>1 an</span>
+    <span>1 an</span>
+    <span>1 an</span>
+    <span>1 an</span>
+    <span>1 an</span>
+    <span>1 an</span>
+  </div>
+
+  <div class="heart">❤️</div>
+  <div class="text">Je t'aime</div>
+</body>
+</html>
